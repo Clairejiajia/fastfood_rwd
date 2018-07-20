@@ -1,0 +1,147 @@
+$font_size_l:36px;
+$font_size_m:24px;
+$font_size_s2:20px;
+$font_size_s1:18px;
+$font_size_s:16px;
+$font_size_xs:14px;
+$font_color_light: #ffffff;
+$font_color_main: #3D0E01;
+$font_color_main_hover:#FF5E45;
+$font_color_order: #ffe66f;
+$font_color_feature: #d0d0d0;
+$font_color_boking: #4a4a4a;
+$btn_font:#fff;
+$btn_bg_next:#F56C23;
+$btn_bg_other:#4a4a4a;
+$btn_bg_next_hover:#E6641E;
+$btn_bg_other_hover:#3c3c3c;
+$btn_cart:#FF5E45;
+$bg_main:#efe9e7;
+$bg_gray:#4a4a4a;
+$bg_lightgray:#FAFAFA;
+
+@mixin logo_titile {
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@mixin pad {
+    @media (max-width: 799px) {
+        @content
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 600px) {
+        @content
+    }
+}
+@mixin phone {
+    @media (max-width: 415px) {
+        @content
+    }
+}
+
+
+.footer {
+    background: $bg_main;
+    h2 {
+        padding-top: 50px;
+        padding-bottom: 16px;
+        font-size: $font_size_m;
+        color: $font_color_main;
+    }
+    p,
+    li {
+        font-size: $font_size_s;
+        color: $font_color_main;
+        line-height: 1.5;
+    }
+    .aboutme {
+        display: block;
+        float: left;
+        width: 29.1%;
+        margin-left: 4.1%;
+        margin-right: 2.1%;
+        @include pad {
+            width: 30%;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+        @include mobile {
+            float: none;
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    }
+    .contactme {
+        display: block;
+        float: left;
+        width: 29.1%;
+        @include pad {
+            width: 30%;
+        }
+        @include mobile {
+            float: none;
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+            h2 {
+                padding-top: 30px;
+            }
+        }
+    }
+    .logo_sns {    display: block;
+    float: right;
+    margin-right: 4.1%;
+    width: 245px;
+    padding-top: 50px;
+        @include pad {
+            width: 28%;
+            margin-right: 2%;
+        }
+        @include mobile {
+            float: right;
+            margin-right: 4.1%;
+            width: 245px;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    }
+    .logo {
+
+        background-image: url(../images/logo_l.svg);
+        background-repeat: no-repeat;
+        height: 49px;
+        margin-bottom: 22px;
+        @include logo_titile;
+        @include pad {
+            background-size: contain;
+            height: 49px;
+            margin-bottom: 22px;
+        }
+    }
+    .sns {
+        float: right;
+        @include mobile {
+            margin-bottom: 24px;
+        }
+        a {
+            display: block;
+            float: left;
+            margin-left: 12px;
+            width: 31px;
+            height: 31px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        a:hover {
+            width: 35px;
+            height: 35px;
+        }
+    }
+}

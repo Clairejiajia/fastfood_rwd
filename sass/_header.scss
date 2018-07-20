@@ -1,0 +1,187 @@
+$font_size_l:36px;
+$font_size_m:24px;
+$font_size_s2:20px;
+$font_size_s1:18px;
+$font_size_s:16px;
+$font_size_xs:14px;
+$font_color_light: #ffffff;
+$font_color_main: #3D0E01;
+$font_color_main_hover:#FF5E45;
+$font_color_order: #ffe66f;
+$font_color_feature: #d0d0d0;
+$font_color_boking: #4a4a4a;
+$btn_font:#fff;
+$btn_bg_next:#F56C23;
+$btn_bg_other:#4a4a4a;
+$btn_bg_next_hover:#E6641E;
+$btn_bg_other_hover:#3c3c3c;
+$btn_cart:#FF5E45;
+$bg_main:#efe9e7;
+$bg_gray:#4a4a4a;
+$bg_lightgray:#FAFAFA;
+
+@mixin logo_titile {
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@mixin pad {
+    @media (max-width: 799px) {
+        @content
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 600px) {
+        @content
+    }
+}
+@mixin phone {
+    @media (max-width: 415px) {
+        @content
+    }
+}
+
+
+
+
+.wrap {
+    max-width: 1024px;
+    margin: 0 auto;
+    font-family: 微軟正黑體;
+    a {
+        text-decoration: none;
+    }
+}
+
+.header {
+    max-width: 100%;
+    height: 420px;
+    background-image: url(../images/header_desktop.png);
+    background-size: cover;
+    position: relative;
+    @include mobile() {
+        background-image: url(../images/header_mobile.png);
+    }
+    .topbar {
+        width: 100%;
+        background: #000;
+        height: 56px;
+        position: absolute;
+        top: 0;
+        z-index: 30;
+    }
+    .logo a {
+        display: block;
+        float: left;
+        width: auto;
+        font-size: $font_size_m;
+        color:$font_color_light;
+        font-weight: bold;
+        padding-top: 16px;
+        margin-left: 4%;
+    }
+    .menu {
+        @include mobile() {
+            width: 100%;
+            .open {
+                display: block;
+            }
+        }
+        ul {
+            float: right;
+            margin-right: 2.6%;
+            @include mobile() {
+                display: none;
+                position: absolute;
+                top: 56px;
+                right: 0;
+                width: 100%;
+                margin: 0;
+            }
+            li {
+                float: left;
+                @include mobile() {
+                    width: 100%;
+                }
+                a {
+                    display: block;
+                    width: 70px;
+                    font-size: $font_size_s;
+                    color:$font_color_light;
+                    padding: 19px;
+                    border-bottom: 2px solid #000;
+                    text-align: center;
+                    @include mobile() {
+                        width: 100%;
+                        border-top: 1px solid #4a4a4a;
+                        border-bottom: none;
+                        background: #000;
+                        text-align: center;
+                    }
+                }
+                .order {
+                    width: 110px;
+                    color: $font_color_order;
+                    @include mobile() {
+                        width: 100%;
+                    }
+                }
+                a:hover,
+                a:active {
+                    border-bottom: 2px solid #fff;
+                    @include mobile() {
+                        border-bottom: none;
+                        background: #4f4f4f;
+                    }
+                }
+            }
+        }
+        .open-menu {
+            a {
+                font-size: $font_size_s;
+                float: right;
+                color:$font_color_light;
+                padding: 19px 0;
+                right: 4%;
+                display: none;
+                @include mobile() {
+                display: block;
+                position: relative;
+            }
+            }
+            
+        }
+    }
+
+    .title {
+        width: 460px;
+        height: 152px;
+        background: rgba(0, 0, 0, .4);
+        position: absolute;
+        top: 123px;
+        left: 50%;
+        color: #fff;
+        text-align: center;
+        margin-left: -230px;
+        @include mobile() {
+            width: 300px;
+            height: 194px;
+            margin-left: -150px;
+            span {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+        h1 {
+            font-size: $font_size_l;
+            margin-top: 25px;
+            margin-bottom: 16px;
+        }
+        h2 {
+            font-size: $font_size_s;
+            margin-bottom: 10px;
+        }
+    }
+}

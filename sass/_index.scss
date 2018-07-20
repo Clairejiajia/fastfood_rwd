@@ -1,0 +1,328 @@
+$font_size_l:36px;
+$font_size_m:24px;
+$font_size_s2:20px;
+$font_size_s1:18px;
+$font_size_s:16px;
+$font_size_xs:14px;
+$font_color_light: #ffffff;
+$font_color_main: #3D0E01;
+$font_color_main_hover:#FF5E45;
+$font_color_order: #ffe66f;
+$font_color_feature: #d0d0d0;
+$font_color_boking: #4a4a4a;
+$btn_font:#fff;
+$btn_bg_next:#F56C23;
+$btn_bg_other:#4a4a4a;
+$btn_bg_next_hover:#E6641E;
+$btn_bg_other_hover:#3c3c3c;
+$btn_cart:#FF5E45;
+$bg_main:#efe9e7;
+$bg_gray:#4a4a4a;
+$bg_lightgray:#FAFAFA;
+
+@mixin logo_titile {
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@mixin pad {
+    @media (max-width: 799px) {
+        @content
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 600px) {
+        @content
+    }
+}
+@mixin phone {
+    @media (max-width: 415px) {
+        @content
+    }
+}
+
+
+.container-feature {
+    background: $bg_gray;
+    height: auto;
+    position: relative;
+    .mid_title {
+        margin: 0 auto;
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        width: 460px;
+        margin-left: -230px;
+        @include mobile {
+            width: 210px;
+            margin-left: -105px;
+        }
+        h2 {
+            font-size: $font_size_s2;
+            line-height: 30px;
+            float: left;
+            text-align: center;
+            margin: 38px 5px;
+            color: $font_color_feature;
+            width: 200px;
+        }
+        .line {
+            background-image: url(../images/line.png);
+            background-repeat: repeat-x;
+            width: 120px;
+            float: left;
+            margin: 38px 0;
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+    ul {
+        margin: 0 10%;
+        padding-top: 145px;
+        @include pad {
+            margin: 0 2%;
+        }
+        @include mobile {
+            width: 100%;
+            margin: 0 10%;
+        }
+        li {
+            display: block;
+            float: left;
+            width: 29%;
+            margin: 0 2% 50px 2.3%;
+            @include pad {
+                display: block;
+                float: left;
+                width: 25%;
+                margin: 0 4.16% 50px 4.16%;
+            }
+            @include mobile {
+                float: none;
+                width: 80%;
+                margin: 0 0 40px 0;
+            }
+            img {
+                width: 100%;
+                padding: 5px;
+                @include mobile {
+                    width: 70%;
+                    margin: 0 15%;
+                }
+            }
+            h3 {
+                color: $font_color_feature;
+                font-size: $font_size_s1;
+                line-height: 2;
+                text-align: center;
+                font-weight: bold;
+                margin: 15px auto;
+            }
+            p {
+                color: $font_color_feature;
+                font-size: $font_size_s;
+                line-height: 1.2;
+                text-align: left;
+            }
+        }
+    }
+}
+
+.container-chef {
+    height: 460px;
+    background: #3d1101;
+    @include pad {
+        width: 100%;
+        height: 460px;
+    }
+    @include mobile {
+        width: 100%;
+        height: auto;
+    }
+    .chef-img {
+        display: block;
+        float: left;
+        width: 45.9%;
+        height: 460px;
+        background-image: url(../images/main_chef_brown.png);
+        background-repeat: no-repeat;
+        margin-left: 4.1%;
+        @include pad {
+            width: 46.68%;
+            margin-left: 2%;
+            background-position: 50% 50%;
+        }
+        @include mobile {
+            display: block;
+            float: none;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+    .chef-info {
+        color: $bg_main;
+        font-size: $font_size_s;
+        padding: 80px 7.51% 0 53%;
+        @include pad {
+            padding: 49px 3.13% 0 53%;
+        }
+        @include mobile {
+            padding: 30px 9.48%;
+        }
+        h2 {
+            font-size: $font_size_s2;
+            line-height: 36px;
+            font-weight: bold;
+        }
+        p {
+            margin-top: 16px;
+            line-height: 1.5;
+        }
+    }
+}
+
+.container-experience {
+    background: $bg_gray;
+    height: auto;
+    color: $font_color_feature;
+    h2 {
+        font-size: $font_size_m;
+        padding-top: 50px;
+        padding-bottom: 38px;
+        text-align: center;
+    }
+    ul {
+        margin: 0 4%;
+        @include mobile {
+            margin: 0 3.05%;
+            height: auto;
+        }
+        li {
+            display: block;
+            float: left;
+            width: 29.2%;
+            margin: 0 1.9% 50px 1.9%;
+            @include mobile {
+                width: 80%;
+                margin: 0 10% 30px 10%;
+                .third {
+                    margin-bottom: 30px;
+                }
+            }
+            .avatar {
+                width: 22.3%;
+                margin-right: 4.1%;
+                float: left;
+            }
+            .avatar-info {
+                display: block;
+                float: left;
+                width: 73.3%;
+                h3 {
+                    height: 67px;
+                    font-size: $font_size_s1;
+                    line-height: 67px;
+                }
+                p {
+                    font-size: $font_size_s;
+                    line-height: 24px;
+                }
+                span {
+                    font-size: $font_size_s;
+                    line-height: 24px;
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
+.container-booking {
+    background: $bg_lightgray;
+    color: $font_color_boking;
+    font-size: $font_size_xs;
+    h2 {
+        font-size: $font_size_m;
+        line-height: 1.5;
+        padding-top: 50px;
+        padding-bottom: 38px;
+        text-align: center;
+    }
+    .map {
+        display: block;
+        float: left;
+        width: 44.9%;
+        height: 386px;
+        background-image: url(../images/Map.png);
+        background-repeat: no-repeat;
+        margin: 0 4.1% 50px 3.12%;
+        @include mobile {
+            float: none;
+            width: 90%;
+            height: 386px;
+            margin: 0 5% 50px 5%;
+            background-position: 50% 50%;
+        }
+    }
+    .form {
+        display: block;
+        float: left;
+        width: 44.9%;
+        @include mobile {
+            float: none;
+            display: block;
+            float: none;
+            width: 90%;
+            margin: 0 5% 50px 5%;
+        }
+        label {
+            font-size: 14px;
+            margin-bottom: 11px;
+            display: block;
+        }
+        input {
+            width: 100%;
+            height: 32px;
+            padding: 5px 14px;
+            margin-bottom: 11px;
+        }
+        input.vegan {
+            width: 10px;
+            height: 10px;
+            padding: 5px 14px;
+            display: inline-block;
+        }
+        .btn {
+            display: block;
+        }
+        .cancel,
+        .enter {
+            display: inline-block;
+            width: 70px;
+            height: 32px;
+            padding: 5px 0;
+            text-align: center;
+            margin-left: 11px;
+            border: none;
+            float: right;
+        }
+        .cancel {
+            background: $btn_bg_other;
+            color: $btn_font;
+        }
+        .enter {
+            background: $btn_bg_next;
+            color: $btn_font;
+        }
+        .cancel:hover {
+            background: $btn_bg_other_hover;
+        }
+
+        .container-booking .form .enter:hover {
+            background: $btn_bg_next_hover;
+        }
+    }
+}

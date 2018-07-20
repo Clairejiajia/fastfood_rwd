@@ -1,0 +1,230 @@
+$font_size_l:36px;
+$font_size_m:24px;
+$font_size_s2:20px;
+$font_size_s1:18px;
+$font_size_s:16px;
+$font_size_xs:14px;
+$font_color_light: #ffffff;
+$font_color_main: #3D0E01;
+$font_color_main_hover:#FF5E45;
+$font_color_order: #ffe66f;
+$font_color_feature: #d0d0d0;
+$font_color_boking: #4a4a4a;
+$btn_font:#fff;
+$btn_bg_next:#F56C23;
+$btn_bg_other:#4a4a4a;
+$btn_bg_next_hover:#E6641E;
+$btn_bg_other_hover:#3c3c3c;
+$btn_cart:#FF5E45;
+$bg_main:#efe9e7;
+$bg_gray:#4a4a4a;
+$bg_lightgray:#FAFAFA;
+$shadow:#adadad;
+
+@mixin logo_titile {
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@mixin pad {
+    @media (max-width: 799px) {
+        @content
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 600px) {
+        @content
+    }
+}
+
+@mixin phone {
+    @media (max-width: 415px) {
+        @content
+    }
+}
+
+.login_container,
+.regist_container {
+    background: $bg_main;
+    padding: 50px 0 30px 0;
+    .logo_title {
+        a {
+            display: block;
+            width: 240px;
+            height: 48px;
+            text-indent: 101%;
+            overflow: hidden;
+            white-space: nowrap;
+            background-image: url(../images/logo_l.svg);
+            background-repeat: no-repeat;
+            margin: 0 auto;
+        }
+        h2 {
+            font-size: $font_size_s2;
+            color: $font_color_main;
+            text-align: center;
+            padding-top: 5px;
+        }
+    }
+}
+
+.login_container {
+    .login {
+        margin: 35px auto 0 auto;
+        width: 300px;
+        height: auto;
+        border-top: 3px solid $btn_cart;
+        font-size: $font_size_s;
+        color: $font_color_main;
+        padding: 10px 2.4%;
+        background: #EFE9E7;
+        box-shadow: 2px 2px 5px $shadow;
+        -webkit-box-shadow: 2px 2px 5px $shadow;
+        -moz-box-shadow: 2px 2px 5px $shadow;
+        legend {
+            font-weight: bold;
+            font-size: $font_size_s1;
+            text-align: center;
+        }
+        label {
+            margin-top: 16px;
+        }
+        input {
+            width: 100%;
+        }
+        a {
+            width: 70px;
+            display: block;
+            color: $btn_cart;
+            margin: 4px 0 30px 0;
+            font-size: $font_size_xs;
+        }
+        a:hover {
+            border-bottom: 1px solid $btn_cart;
+        }
+        .go_registed,
+        .signin {
+            color: $btn_font;
+            width: 48%;
+            height: 32px;
+            float: left;
+            text-align: center;
+            font-size: $font_size_xs;
+            line-height: 14px;
+        }
+        .go_registed {
+            background: $btn_bg_other;
+            margin-right: 4%;
+        }
+        .signin {
+            background: $btn_bg_next;
+        }
+        .go_registed:hover {
+            background: $btn_bg_other_hover;
+        }
+
+        .signin:hover {
+            background: $btn_bg_next_hover;
+        }
+    }
+}
+
+
+.regist_container {
+    .regist {
+        margin: 35px auto 0 auto;
+        width: 62%;
+        height: auto;
+        border-top: 3px solid $btn_cart;
+        font-size: $font_size_s;
+        color: $font_color_main;
+        padding: 10px 2.4%;
+        background: #EFE9E7;
+        box-shadow: 2px 2px 5px $shadow;
+        -webkit-box-shadow: 2px 2px 5px $shadow;
+        -moz-box-shadow: 2px 2px 5px $shadow;
+        @include pad {
+            width: 60%;
+        }
+        @include mobile {
+            width: 85%;
+        }
+        legend {
+            font-weight: bold;
+            font-size: $font_size_s1;
+            text-align: center;
+        }
+        label {
+            margin-top: 16px;
+        }
+        input {
+            width: 100%;
+        }
+        a {
+            width: 100px;
+            display: block;
+            color: $btn_cart;
+            margin: 4px 0 30px 0;
+            font-size: $font_size_xs;
+        }
+        a:hover {
+            border-bottom: 1px solid $btn_cart;
+        }
+
+        .announce,
+        .regist_form {
+            width: 48%;
+            height: auto;
+            float: left;
+            @include pad {
+                width: 100%;
+                float: none;
+            }
+            p {
+                font-size: $font_size_xs;
+                color: $font_color_main;
+                line-height: 1.5;
+            }
+        }
+        .regist_form {
+            .send {
+                color: $btn_font;
+                width: 125px;
+                height: 32px;
+                float: right;
+                text-align: center;
+                font-size: $font_size_xs;
+                line-height: 14px;
+                background: $btn_bg_next;
+                @include mobile {
+                    width: 100%;
+                    float: none;
+                }
+            }
+            .send:hover {
+                background: $btn_bg_next_hover;
+            }
+        }
+        hr {
+            width: 1px;
+            height: 230px;
+            background: $font_color_main;
+            display: block;
+            float: left;
+            border: none;
+            margin-right: 1.5%;
+            margin-left: 1.5%;
+            @include pad {
+                width: 100%;
+                width: 100%;
+                height: 1px;
+                display: block;
+                float: none;
+                border: none;
+                margin: 20px auto 0px auto;
+            }
+        }
+    }
+}

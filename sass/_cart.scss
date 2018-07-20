@@ -1,0 +1,280 @@
+$font_size_l:36px;
+$font_size_m:24px;
+$font_size_s2:20px;
+$font_size_s1:18px;
+$font_size_s:16px;
+$font_size_xs:14px;
+$font_color_light: #ffffff;
+$font_color_main: #3D0E01;
+$font_color_main_hover:#FF5E45;
+$font_color_order: #ffe66f;
+$font_color_feature: #d0d0d0;
+$font_color_boking: #4a4a4a;
+$btn_font:#fff;
+$btn_bg_next:#F56C23;
+$btn_bg_other:#4a4a4a;
+$btn_bg_next_hover:#E6641E;
+$btn_bg_other_hover:#3c3c3c;
+$btn_cart:#FF5E45;
+$bg_main:#efe9e7;
+$bg_gray:#4a4a4a;
+$bg_lightgray:#FAFAFA;
+
+@mixin logo_titile {
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@mixin pad {
+    @media (max-width: 799px) {
+        @content
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 600px) {
+        @content
+    }
+}
+@mixin phone {
+    @media (max-width: 415px) {
+        @content
+    }
+}
+
+
+.cart-container {
+    background: $bg_main;
+    padding: 48px 4% 0px 4%;
+    height: auto;
+    @include mobile {
+        padding: 48px 3% 0px 3%;
+    }
+    .aside_menu {
+        width: 220px;
+        float: left;
+        @include mobile {
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
+        h2 {
+            font-size: $font_size_s2;
+            color: $font_color_main;
+            line-height: 32px;
+            margin-bottom: 38px;
+            @include mobile {
+                margin-bottom: 20px;
+            }
+            i {
+                font-size: 26px;
+            }
+        }
+        a {
+            display: block;
+            width: 100%;
+            padding: 2px 0 2px 8px;
+            font-size: $font_size_s;
+            color: $font_color_main;
+            line-height: 32px;
+            border-bottom: 1px solid $font_color_main;
+        }
+        a:hover,
+        a:focus {
+            color: $font_color_light;
+            background: $font_color_main;
+            border-bottom: 1px solid $font_color_light;
+        }
+    }
+
+    .product_container {
+        margin-left: 240px;
+        max-width: 784px;
+        height: auto;
+        @include mobile {
+            margin-left: 0px;
+            width: 100%;
+        }
+        .mid_menu {
+            width: 100%;
+            height: 70px;
+        }
+        .serch_bar {
+            width: 60%;
+            float: left;
+            @include pad {
+                width: 100%;
+                float: none;
+            }
+            @include mobile {
+                margin: 30px auto;
+            }
+                 @include phone {
+           width: 85%;
+            }
+            input.serch {
+                width: 88%;
+                border: 2px solid $font_color_main;
+                background: rgba(0, 0, 0, 0);
+                padding: 2px 0 2px 8px;
+                height: 32px;
+                margin: 0;
+                float: left;
+                @include mobile {
+                    width: 90%;
+                }
+            }
+            a {
+                display: block;
+                float: left;
+                width: 32px;
+                height: 32px;
+                text-align: center;
+                line-height: 32px;
+                border: 2px solid $font_color_main;
+                background: $font_color_main;
+                color: $font_color_light;
+            }
+        }
+        .buy_action {
+            float: right;
+            margin-right: 10px;
+            @include pad {
+                margin-right: 0;
+            }
+            li {
+                float: left;
+                height: 32px;
+                a {
+                    display: block;
+                    color: $font_color_main;
+                    font-size: $font_size_s;
+                    height: 32px;
+                    text-align: center;
+                    line-height: 32px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+                a:hover {
+                    color: $font_color_main_hover;
+                }
+            }
+            hr {
+                width: 1px;
+                height: $font_size_s;
+                background: $font_color_main;
+                display: block;
+                float: left;
+                border: none;
+            }
+        }
+        .product {
+
+            ul {
+                width: 100%;
+                li {
+                    float: left;
+                    width: 220px;
+                    height: 280px;
+                    text-align: center;
+                    box-shadow: 2px 2px 5px #adadad;
+                    -webkit-box-shadow: 2px 2px 5px #adadad;
+                    -moz-box-shadow: 2px 2px 5px #adadad;
+                    margin: 5px 10px 30px 0;
+                    position: relative;
+                    @include pad {
+                        float: none;
+                        width: 220px;
+                        margin: 5px auto 30px auto;
+                    }
+
+                    .hotissue {
+                        position: absolute;
+                        top: -5px;
+                        right: -5px;
+                        z-index: 30;
+                    }
+                    .img {
+                        width: 100%;
+                        height: 120px;
+                        position: relative;
+                        background-repeat: no-repeat;
+                        background-position: 50% 50%;
+                        background-size: cover;
+                        i {
+                            position: absolute;
+                            top: 10px;
+                            left: 10px;
+                            color: $font_color_light;
+                        }
+                        i:hover,
+                        i:focus,
+                        i.like {
+                            color: #ff5151;
+                            font-weight: 900;
+                        }
+                    }
+                    .p1 {
+                        background-image: url(../images/product_1.png);
+                    }
+                    .p2 {
+                        background-image: url(../images/product_2.png);
+                    }
+                    .p3 {
+                        background-image: url(../images/product_3.png);
+                    }
+                    .p4 {
+                        background-image: url(../images/product_4.png);
+                    }
+                    .p5 {
+                        background-image: url(../images/p5.jpg);
+                    }
+                    .p6 {
+                        background-image: url(../images/p6.jpeg);
+                    }
+
+                    h3 {
+                        font-size: $font_size_s2;
+                        font-weight: bold;
+                        color: $font_color_main;
+                        margin-top: 11px;
+                    }
+                    h4 {
+                        font-size: $font_size_s;
+                        color: $font_color_main;
+                        margin-top: 4px;
+                    }
+                    .button {
+                        margin: 16px auto;
+                        width: 90%;
+
+                        a {
+                            display: block;
+                            height: 28px;
+                            line-height: 25px;
+                            font-size: 16px;
+                            color: $btn_cart;
+                            border: 2px solid $btn_cart;
+                            border-radius: 3px;
+                        }
+                        a:hover {
+                            background: $btn_cart;
+                            color: $btn_font;
+                        }
+                    }
+                }
+            }
+            hr {
+                width: 91px;
+                border-top: 1px solid $font_color_main;
+                margin: 8px auto 20px auto;
+            }
+            p {
+                font-weight: bold;
+                font-size: $font_size_s2;
+                color: $font_color_main;
+            }
+        }
+    }
+}
